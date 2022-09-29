@@ -1,0 +1,18 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+data/org.gnome.GHex.appdata.xml.in
+data/org.gnome.GHex.desktop.in
+src/chartable.c
+src/config.c
+src/converter.c
+src/findreplace.c
+src/ghex-ui.xml
+src/ghex-window.c
+src/gtkhex.c
+src/hex-dialog.c
+src/hex-document-ui.c
+src/hex-document.c
+src/main.c
+src/preferences.c
+src/print.c
+src/ui.c

@@ -1,0 +1,13 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: gtkhex
+Description: GtkHex - A hex display widget.
+Version: @VERSION@
+Requires: gtk+-3.0
+Requires.private: gail-3.0
+Libs: -L${libdir} -lgtkhex-3
+Cflags: -I${includedir}/gtkhex-3
+
