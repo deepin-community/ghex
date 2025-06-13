@@ -1,7 +1,16 @@
+/* vim: colorcolumn=80 ts=4 sw=4
+ */
 /* -*- Mode: C; tab-width: 4; indent-tabs-mode: t; c-basic-offset: 4 -*- */
-/* gtkhex.h - definition of a GtkHex widget, modified for use with GnomeMDI
+/* gtkhex.h - definition of a HexWidget widget, modified for use with GnomeMDI
 
    Copyright (C) 2004 Free Software Foundation
+
+   Copyright © 2005-2020 Various individual contributors, including
+   but not limited to: Jonathon Jongsma, Kalev Lember, who continued
+   to maintain the source code under the licensing terms described
+   herein and below.
+
+   Copyright © 2021 Logan Rathbone <poprocks@gmail.com>
 
    GHex is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public License as
@@ -18,31 +27,20 @@
    If not, write to the Free Software Foundation, Inc.,
    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-   Author: Jaka Mocnik <jaka@gnu.org>
+   Original Author: Jaka Mocnik <jaka@gnu.org>
 */
 
-#ifndef __GHEX_CONVERTER_H__
-#define __GHEX_CONVERTER_H__
+#ifndef GHEX_CONVERTER_H
+#define GHEX_CONVERTER_H
 
 #include <gtk/gtk.h>
+#include <adwaita.h>
 
 G_BEGIN_DECLS
 
-typedef struct _Converter {
-	GtkWidget *window;
-	GtkWidget *entry[5];
-	GtkWidget *close;
-	GtkWidget *get;
-
-	gulong value;
-} Converter;
-
-/* Defined in converter.c: used by close_cb and converter_cb */
-extern GtkWidget *converter_get;
-extern Converter *converter;
-
-Converter *create_converter(void);
+GtkWidget *create_converter (GtkWindow *parent_win, /* can-NULL */
+		HexWidget *gh);
 
 G_END_DECLS
 
-#endif /* !__GHEX_CONVERTER_H__ */
+#endif /* GHEX_CONVERTER_H */
