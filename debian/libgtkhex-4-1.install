@@ -1,0 +1,3 @@
+usr/lib/*/libgtkhex-4.so.*
+usr/lib/*/gtkhex-4.0/libhex-buffer-mmap.so
+usr/lib/*/gtkhex-4.0/libhex-buffer-direct.so

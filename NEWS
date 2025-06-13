@@ -1,3 +1,511 @@
+=========
+GHex 46.2
+=========
+
+This release contains a critical stability bugfix for users of some runtimes
+(Ubuntu 24.04 is at least affected) with usage of the Copy Special function.
+
+Changes and bugfixes since 46.1:
+
+- build: Don't include gtk-hex-paste-data.c symbols in both lib and binary
+  (#78) (Logan Rathbone)
+
+=========
+GHex 46.1
+=========
+
+This release contains a critical bugfix for users of the upcoming release of
+GTK 4.18.
+
+Changes and bugfixes since 46.alpha:
+
+- main: fix GdkDisplay access before init (see gtk!7836) (G. Willems)
+
+Translation updates:
+
+- Andika Triwidada (id)
+- Jürgen Benvenuti (de)
+- Martin (sl)
+- Rafael Fontenelle (pt_BR)
+
+=========
+GHex 46.0
+=========
+
+Changes and bugfixes since 46.alpha:
+- widget: Fade zeroes in the hex display (Logan Rathbone)
+- data: add 'hexadecimal' keyword to .desktop file (Nelson Benítez León)
+- appdata: Remove none OARS tags (Sabri Ünal)
+- appdata: Update appdata (Sabri Ünal)
+- appwin: Don't let AdwTabView trample over shortcuts (Logan Rathbone)
+- lib: Fix PANGO_COLOR_FROM_FLOAT macro (Logan Rathbone)
+- docs: GI tweaks and fixes (Logan Rathbone)
+- lib/app: Initial support for marks (Logan Rathbone)
+- help: Add marks section (Logan Rathbone)
+- i18n: Remove domain that prevented use of translations (#66) (Anders Jonsson)
+- appwin: Allow dropping multiple files (Guldoman)
+- widget/doc: Set widget busy state while file is mid-save (#76) (Logan Rathbone)
+- Code and documentation cleanups (Logan Rathbone)
+
+Translation updates:
+- Anders Jonsson (sv)
+- Balázs Úr (hu)
+- Christian Kirbach (de)
+- Daniel Mustieles (es)
+- Evangelos Skarmoutsos (el)
+- Jiri Grönroos (fi)
+- Jürgen Benvenuti (de)
+- Sabri Ünal (tr)
+- Sergej A. (ru)
+- Yuri Chornoivan (uk)
+
+This release includes libgtkhex 4.8.0
+
+=============
+GHex 46.alpha
+=============
+
+Changes and bugfixes since 45.0:
+- GObject property getter fixes (Logan Rathbone)
+- buf-malloc/mmap: Implement GObject 'file' property getter properly (Logan
+  Rathbone)
+- hex-buf/doc: Clarify GI transfer annotations (Logan Rathbone)
+- hex-doc/buf: Support opening zero-length files (See: #73) (Logan Rathbone)
+- hex-buf-iface: More appropriate messages when selecting backend (Logan
+  Rathbone)
+- hex-doc: Allow setting HEX_BUFFER env var to specify default backend (Logan
+  Rathbone)
+- Remove almost all remaining GtkDialog use (Logan Rathbone)
+- about: port dialog to libadwaita (Titouan Real)
+- Update POTFILES.in (Logan Rathbone)
+- chartable: Port to GtkColumnView (Logan Rathbone)
+- gtkhex: Local variables in switch statement should be in own scope (ie, fix
+  clang build issues) (Fixes: #74) (David C. Manuelda, Logan Rathbone)
+- appwin: Mark error message string properly translatable (Logan Rathbone)
+
+Translation updates:
+- Alan Mortensen (da)
+- Anders Jonsson (sv)
+- Emin Tufan Çetin (tr)
+
+=========
+GHex 45.0
+=========
+
+* docs: fix introspection compiler warning
+* help: Add section on geometry (closes:  #63)
+
+This release includes libgtkhex 4.6.0
+
+Translation updates:
+
+- Christian Kirbach (de)
+- Jiri Grönroos (fi)
+- Vasil Pupkin (be)
+- Anders Jonsson (sv)
+- Sergej A (ru)
+- Yuri Chornoivan (uk)
+
+============
+GHex 45.beta
+============
+
+- hex-dialog: Prevent decimal display widgets from getting truncated (Jordan
+Christiansen)
+- widget: Make paste overwrite when not in insert mode (Logan Rathbone) (see
+  #62)
+- Mark three strings translatable (Sabri Ünal)
+- ui: Add tooltip to the Main Menu (Sabri Ünal)
+- Add shortcut for preferences and fix help shortcut description (Sabri Ünal)
+- appwin: Ensure HexStatusbar is registered before initting template (Logan
+  Rathbone) (fixes #65)
+- widget: Simplify key_press_cb (Jordan Christiansen)
+- widget: Make paste replace the selection (Jordan Christiansen)
+- ui: Mark translatable strings "yes" as opposed to "true" (Sabri Ünal)
+- jump-dialog: Pressing Enter should default to 'Jump' and dialog should
+  subsequently be closed (Lucas Chollet)
+- findrep: Pressing Enter should default to 'Find' (Logan Rathbone)
+- jump-dialog: Fix typo in a11y string (Logan Rathbone)
+- Fix deprecation compiler warnings/port most dialogs to AdwMessageDialog
+  (Logan Rathbone)
+
+Translation updates:
+
+- Anders Jonsson (sv)
+- Andika Triwidada (id)
+- Asier Sarasua Garmendia (eu)
+- Balázs Úr (hu)
+- Bruce Cowan (en_GB)
+- Kukuh Syafaat (id)
+- Piotr Drąg (pl)
+- Sabri Ünal (tr)
+- Sergej A (ru)
+- Yuri Chornoivan (uk)
+- Мирослав Николић (sr)
+
+=========
+GHex 44.0
+=========
+
+New stable release with no code changes compared to the previous 44.rc release
+candidate.
+
+This release includes libgtkhex 4.4.0
+
+Translation updates:
+
+- Jiri Grönroos (fi)
+- Sabri Ünal (tr)
+
+==========
+GHex 44.rc
+==========
+
+Translation updates:
+
+- Anders Jonsson (sv)
+- Asier Sarasua Garmendia (eu)
+- Balázs Úr (hu)
+- Christian Kirbach (de)
+- Sabri Ünal (tr)
+- Sergej A (ru)
+
+============
+GHex 44.beta
+============
+
+- widget: Add context menu popover to set custom geometry (Logan Rathbone)
+- appwin: Accept drag 'n' drop for files (Logan Rathbone)
+
+Translation updates:
+
+- Andika Triwidada (id)
+- Piotr Drąg (pl)
+- Yuri Chornoivan (uk)
+- Anders Jonsson (sv)
+
+=============
+GHex 44.alpha
+=============
+
+- HexWidget: Only alter payload length in insert mode (Jordan Christiansen)
+- help: Remove ducktype and update to reflect change in delete behaviour (Logan
+  Rathbone)
+
+Translation updates:
+
+- Andika Triwidada (id)
+- Fabio Tomat (fur)
+- Hugo Carvalho (pt)
+- Jose Luis Tirado (es)
+- Nathan Follens (nl)
+- Olga Smirnova (ie)
+- Мирослав Николић (sr)
+
+=========
+GHex 43.0
+=========
+
+New stable release with no code changes compared to the previous 43.rc release
+candidate.
+
+This release includes libgtkhex 4.2.0
+
+Translation updates:
+
+- Emin Tufan Çetin (tr)
+
+==========
+GHex 43.rc
+==========
+
+Changes and Bugfixes since GHex 43.alpha:
+
+- preferences: vertically center font buttons (Bilal Elmoussaoui)
+- preferences: vertically center spin button (Bilal Elmoussaoui)
+- hex-doc: Fix assertion check in hex_document_write_to_file_async (Logan Rathbone)
+- hex-doc: Add sanity checks to _get_buffer and _get_file in public API (Logan Rathbone)
+- appwin: Properly call gettext on string marked for translation (Logan Rathbone)
+- widget: Don't drop additional reference on menu model (Logan Rathbone)
+- appwin: Support dragging tabs to new window (Logan Rathbone)
+- build: Added option to generate VALA vapi (JCWasmx86)
+- Minor cleanups (Logan Rathbone)
+- hex-doc: Fix replacing bytes over a gap (Jordan Christiansen)
+- icons: Make document-modified-symbolic a resource (Logan Rathbone) (fixes #52)
+
+Translation updates:
+
+- Alan Mortensen (da)
+- Anders Jonsson (sv)
+- Balázs Úr (hu)
+- Daniel Mustieles (es)
+- Jiri Grönroos (fi)
+- Piotr Drąg (pl)
+- Sergej A (ru)
+
+=============
+GHex 43.alpha
+=============
+
+This release includes libgtkhex 4.1.90 (alpha release of 4.2) - note that there
+has been an ABI break with a soname versioning bump since 4.0.x. This was not
+intentional, but unfortunately unavoidable.
+
+Changes and Bugfixes since GHex 42.3 (Logan Rathbone):
+
+- Port to libadwaita, and fix UI papercuts that stood out more thereafter
+  (thanks to: Alexander Mikhaylenko, Bilal Elmoussaoui and Maximiliano for their
+  review: #48)
+    * Remove custom tab widget
+    * Rework preferences dialog as AdwPreferencesWindow
+- Introduce custom statusbar with monospace support
+- HexWidget:
+    * Add API to show/hide specific columns
+    * Disallow keyboard shortcuts to activate hidden panes
+    * Support PRIMARY selection
+- Find and Replace improvements:
+    * Support options for case-sensitivity, regex
+    * Choose visibility of hex/ascii/both in find/replace dialogs
+    * Show number of replacements with Replace All
+- New backend: HexBufferDirect, and support for reading/writing block devices
+  (disabled on Flatpak)
+- Load default backend plugins more intelligently
+    * docs: document slight change in hex_buffer_util_new behaviour when a
+    non-existent plugin is requested (return NULL instead of falling back to
+    malloc).
+- chartable: ESC should close dialog
+- Animate opening and closing of find/replace and conversions panes
+- paste-special: Move space-delim hex pairs to UTF8 list
+- build: Fix incorrect soname numbering; split resources between app and library
+- docs: document expanded HexDocument and HexWidget APIs
+- Error handling improvements and code cleanups
+
+Translation updates:
+
+UI translations:
+- Anders Jonsson (sv)
+- Andika Triwidada (id)
+- Asier Sarasua Garmendia (eu)
+- Enrico Nicoletto (pt_BR)
+- Piotr Drąg (pl)
+- Sergej A (ru)
+- Yuri Chornoivan (uk)
+- Мирослав Николић (sr)
+
+Doc translations:
+- Andika Triwidada (id)
+
+=========
+GHex 42.3
+=========
+
+Bugfixes since 42.2 (all backports from master pending upcoming 43 release)
+(Logan Rathbone):
+
+- main: Hotfix to workaround gtk #4880 (affects Save As dialogs on X11
+  primarily)
+- config: Add GNOME 42+ compatibility for dark mode, and fetch dark settings
+  from portal if possible
+- widget: Properly update highlights upon resize
+- find-replace: Remove spurious g_object_ref() call
+
+=========
+GHex 42.2
+=========
+
+Bugfixes since 42.1:
+
+- hexwidget: Fix redraw on keyboard focus change (Logan Rathbone)
+
+Translation updates:
+
+- Andika Triwidada (id)
+
+=========
+GHex 42.1
+=========
+
+Bugfixes since 42.0:
+
+- appwin: Fix hamburger menu checkmark for Find & Replace dialog (Logan
+  Rathbone)
+- appwin: Fix markup on tab-close dialogs (Logan Rathbone)
+- findreplace: Mark two a11y strings translatable (#43) (Logan Rathbone)
+
+Translation updates:
+
+- Piotr Drąg (pl)
+- Enrico Nicoletto (pt_BR)
+
+=========
+GHex 42.0
+=========
+
+I am pleased to announce GHex 42.0, the first stable release of GHex based on
+GTK4!
+
+Despite earlier statements, I have decided to adopt the newer style of
+versioning for the application, to avoid confusion. The application version
+will represent the version of the GNOME platform that is targetted. The
+library, libgtkhex-4, will have a more traditional version numbering scheme,
+which will be documented in the NEWS file with each GHex release.
+
+This release includes libgtkhex 4.0.0
+
+Many people volunteered their time and skills to provide contributions between
+4.beta.1 and now. These contributions have included bugfixes, documentation
+tweaks, and many translation updates, which is greatly appreciated.
+
+Changes and Bugfixes since 4.beta.1:
+
+- appwindow: Fix format string warnings (David King)
+- paste-special: properly copy hex pairs for higher-order bytes (Logan Rathbone)
+- doc: build devhelp index (Jan Tojnar)
+- build: Use gnome.post_install (Bobby Rong)
+- docs: Remove unused translated ghex_window_open.png image files (Andre Klapper)
+- help: fix typo etc in help (Anders Jonsson)
+- build: Split versioning scheme for app and lib (Logan Rathbone)
+- gtkhex: Segregate mmap backend as plugin (Logan Rathbone)
+
+Translation Updates:
+
+UI translations:
+- Alan Mortensen (da)
+- Anders Jonsson (sv)
+- Asier Sarasua Garmendia (eu)
+- Balázs Úr (hu)
+- Daniel Mustieles (es)
+- Hugo Carvalho (pt)
+- Jiri Grönroos (fi)
+- Marek Černocký (cs)
+- Matheus Barbosa (pt_BR)
+- Rafael Fontenelle (pt_BR)
+- Sergej A (ru)
+- eshagh shahidani (fa)
+- sicklylife (ja)
+
+Doc translations:
+- Anders Jonsson (sv)
+- Sergej A (ru)
+- Yuri Chornoivan (uk)
+
+=============
+GHex 4.beta.1
+=============
+
+Changes and Bugfixes:
+
+HexWidget: Implement Home and End keybindings (Logan Rathbone)
+HexWidget: fix offsets redraw issue (Logan Rathbone)
+appwin: fix function order when opening invalid file (Logan Rathbone)
+help: initial rewrite to mallard and update for GHex4 (Logan Rathbone)
+help: add support for static HTML help (Logan Rathbone)
+help: fix typos (Yuri Chornoivan)
+
+Translation updates:
+
+Yuri Chornoivan (uk)
+
+==============
+GHex 4.alpha.2
+==============
+
+As can be seen from the git logs, many commits have been made since 4.alpha.1.
+The plurality of the effort went into getting as close as possible to an
+API/ABI I'm happy with respect to libgtkhex, and documenting same. To that end,
+the GtkHex widget has been renamed to HexWidget, so that we don't pollute the
+GTK namespace. I recognize that this has been its name for 20+ years, but since
+this is a new impending major release, API can be broken. It is not part of GTK
+and never has been, so placing it under that namespace was confusing.
+
+I was on the fence about calling this a beta, but there have been so many
+changes, so I'll let things cook for a bit and ensure that the API is where I
+want it to be for libgtkhex 4.0.0 before declaring a beta and being in an API
+freeze.
+
+Changes and Bugfixes (Logan Rathbone):
+
+- lib: Rename GtkHex to HexWidget
+- lib/docs: Initial API documentation (gi-docgen required)
+- GUI/settings: support quadwords grouping
+- lib/app: asynchronous APIs for many operations, and integrate with
+  application features
+- Error handling improvements
+- HexBufferIface: Standardize on GFile when it comes to file handling
+- HexWidget: Rework the "busy" spinner to be at the widget level
+- lib: Rework data types so that we have a minimum cursor pos and file
+  size that works with files larger than 2 GB
+- HexBufferMmap: improvements, fixes and optimizations
+- HexWidget: dynamically sized offset column, and fix calculation of offset
+  cols required (#41; thanks to Jonas Stein for reporting)
+- findreplace: watch/busy feedback and cancellable
+- converter: a11y update
+- meson: add `introspection` and `gtk_doc` options
+- meson: remove `experimental-mmap` option; replace with `buffer-backend` (with
+  mmap being the new default, where supported; see meson_options.txt)
+- lib: Make some raw structs into boxed types for GI
+- HexWidget: restore hex_widget_set_geometry API
+- Various code cleanups and miscellaneous bugfixes
+
+Translation Updates:
+
+- Yuri Chornoivan (uk)
+- Enrico Nicoletto (pt_BR)
+- Piotr Drąg (update POTFILES.in)
+
+==============
+GHex 4.alpha.1
+==============
+
+This is the first alpha release of GHex with GTK4 support.  As it has been
+substantially reworked from GHex 3.x, it will require some substantial testing
+and translation updates.
+
+Visibly to the end user, some new features include:
+
+ - More modern and up-to-date look and feel, consistent with the GNOME HIG.
+
+ - Tabbed interface.
+
+ - Dark Mode (by default, the GTK system-wide "prefer-dark-theme" setting is
+   used, but can be overridden with a checkbox and a switch in the Preferences
+   dialog).
+
+ - libadwaita colour compatibility; if you use the Adwaita theme and GNOME
+   apps that utilize libadwaita, GHex will (read: should) match the colour
+   scheme. libadwaita is not a planned dependency for GHex at this time as many
+   of its users are GTK users who do not run GNOME, and I want to keep GHex's
+   dependency requirements to a minimum.
+
+ - Custom clipboard data, for less error-prone copying and pasting of binary
+   data; this will fall back to plaintext when unavailable.
+
+ - Copy and Paste Special dialogs, which allow you to, for instance, copy and
+   paste hex pairs from GHex into other applications, and to paste hex pairs
+   from other applications into GHex.
+
+Changes:
+
+ - Port and rework for GTK4 (Logan Rathbone)
+
+Translation Updates:
+
+ - Yuri Chornoivan (uk)
+ - Piotr Drąg (update POTFILES.in and .desktop file)
+
+===========
+GHex 3.41.1
+===========
+
+Changes:
+
+- Add clipboard shortcuts to find/replace dialogs (Logan Rathbone)
+
+Translation Updates:
+
+- Matej Urbančič (sl)
+- Seong-ho Cho (ko) 
+
 ===========
 GHex 3.41.0
 ===========

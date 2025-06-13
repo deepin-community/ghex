@@ -1,0 +1,40 @@
+From f9f050b7e5607343bd6089099401a37b039779b4 Mon Sep 17 00:00:00 2001
+From: Matthias Klumpp <matthias@tenstral.net>
+Date: Sat, 3 May 2025 04:50:58 +0200
+Subject: [PATCH] Use appstreamcli for validation instead of appstream-util
+
+The appstream-util tool is deprecated and does not support recent
+versions of the AppStream specification. This patch uses the more modern
+tool.
+---
+ data/meson.build | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/data/meson.build b/data/meson.build
+index dddda611..653b9fc6 100644
+--- a/data/meson.build
++++ b/data/meson.build
+@@ -81,15 +81,15 @@ appdata = i18n.merge_file(
+   install: true
+ )
+ 
+-appstream_util_prg = find_program(
+-  'appstream-util',
++appstreamcli_prg = find_program(
++  'appstreamcli',
+   required: false
+ )
+ 
+-if appstream_util_prg.found()
++if appstreamcli_prg.found()
+   test(
+     'Validate appstream file',
+-    appstream_util_prg,
+-    args: ['validate-relax', '--nonet', appdata]
++    appstreamcli_prg,
++    args: ['validate', '--no-net', '--explain', appdata]
+   )
+ endif
+-- 
+GitLab
+
